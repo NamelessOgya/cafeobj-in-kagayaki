@@ -1,0 +1,10 @@
+export model_save_freq=10
+export base_alive_time=35
+export hidden_dim=128
+export hidden_depth=8
+export training_iter=500
+export learning_rate=0.001
+export win_rate_threshold=0.55
+export num_env_runners=2
+export stop_timesteps=2000
+export stop_iters=10000000
