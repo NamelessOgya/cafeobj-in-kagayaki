@@ -37,6 +37,7 @@ qsub -q GPU-1 -l select=1:ngpus=1 -I
 ./start_notebook_server.sh
 ```  
 しばらくすると、http://spc....みたいなリンクが出てくるので、コピペしてブラウザで開けばnotebook環境につなげる。  
+(初回の起動はかなり時間がかかります。)
   
 ### 2. batch jobの実行
 repositoryのルートディレクトリから  
@@ -46,10 +47,22 @@ repositoryのルートディレクトリから
   
 ### 結果確認    
 確認したいメトリクスに関してこんな感じで確認できます。  
-[wandbダッシュボード](https://api.wandb.ai/links/data_science_nichika/vdj1aubw)
+[wandbダッシュボード サンプル](https://api.wandb.ai/links/data_science_nichika/vdj1aubw)
   
+## 便利コマンド  
+### 自分のjobを確認  
+```
+qstat -u (ログインユーザー名)  
+```
 
-## カスタム環境に関して  
+### 自分のjobを削除  
+```
+qdel [job名 .spcc-xxxxみたいなやつ]  
+```  
+
+
+
+## 補足: カスタム環境に関して  
 cartpoleをもとにpvpの対戦環境を作りました。  
 - stabilizerとdisturberの二つの役割で対戦を実施する。  
 - stabilizerとdisturberが交互に行動する。  
