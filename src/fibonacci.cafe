@@ -1,0 +1,13 @@
+open NAT .
+    op fib : Nat -> Nat .
+    op sfib : Nat -> Nat .
+    var NzX : NzNat .
+    -- fib
+    eq fib(0) = 0 .
+    eq fib(NzX) = sfib(p NzX) .
+    -- sfib
+    eq sfib(0) = 1 .
+    eq sfib(NzX) = fib(NzX) + fib(p NzX) .
+    --
+    red fib(10) .
+close
