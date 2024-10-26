@@ -36,7 +36,11 @@ cafeojb
 ### .cafeファイルの実行  
 例としてsrc/fibonacci.cafeを実行  
 ```
-cafeobj ./src/fibonacci.cafe　
+cafeobj -batch src/sample_fnc.cafe > cafe.out　
 ```  
+コードは[公式チュートリアル](https://cafeobj.org/2015/02/tutorial-first-steps-in-cafeobj/)から拝借  
+  
+結果はcafe.outファイルに書き出されます。  
+
 結果があっているのかは不明..
 

@@ -1,0 +1,16 @@
+open NAT .
+vars A B : Nat
+
+op square : Nat -> Nat .
+eq square(A) = A * A .
+
+op f : Nat Nat -> Nat .
+eq f(A, B) = A * A + B * B .
+
+op g : Nat Nat -> Nat .
+eq g(A, B) = square(A) + square(B) .
+
+red square(10) .
+red f(3,4) .
+red g(3,4) .
+close

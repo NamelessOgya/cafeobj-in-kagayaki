@@ -10,3 +10,4 @@ config.ini
 *.sif
 run.sh
 chokosen-loveti.*
+*.out
